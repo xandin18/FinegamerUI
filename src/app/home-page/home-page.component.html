@@ -1,0 +1,32 @@
+<app-header></app-header>
+<img src="../../assets/banner-redragon.png" alt="banner" class="banner">
+<div class="container-produtos">
+    <h2>Mais Populares</h2>
+    <section class="carousel">
+        <div class="container-fluid">
+            <div class="slider-wrap">
+                <div class="slider-main">
+                    <div class="item" *ngFor="let produto of produtos; let i = index" [class.active]="i === produtoAtual">
+                        <div class="cartaz">
+                            <b>{{ produto.nome }}</b>
+                            <img [src]="produto.foto" alt="Imagem">
+                            <h5>{{ produto.preco | currency:'BRL' }}</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-area">
+                    <button type="button" class="prev" appPrev>Prev</button>
+                    <button type="button" class="next" appNext>Next</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div class="container-banners">
+        <div class="banners">
+            <img src="../../assets/Banner1.png" alt="banner1">
+            <img src="../../assets/Banner2.png" alt="banner2">
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

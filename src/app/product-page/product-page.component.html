@@ -1,0 +1,54 @@
+<app-header></app-header>
+<form class="form-produto">
+    <div class="background-produto container-produto">
+        <h2 [innerText]="nameproduct"></h2>
+        <div class="container-image">
+            <img src="https://www.logitechstore.com.br/media/catalog/product/cache/1/image/634x545/9df78eab33525d08d6e5fb8d27136e95/g/2/g203-01.png" alt="image-product">
+        </div>
+        <div class="useless">
+            <div>
+                <div>
+                    <div class="container-info">
+                        <img src="../../assets/Return.png" alt="alou">
+                        <div class="text-container">
+                            <h3>Troca gratis</h3>
+                            <b>Conheça todas as nossas facilidades. Fique livre para trocar em até 30 dias</b>
+                        </div>
+                    </div>
+                    <div class="container-info">
+                        <img src="../../assets/Flower.png" alt="alouu">
+                        <div class="text-container">
+                            <h3>Sutentabilidade</h3>
+                            <b>Tecnologia responsável, que respeita o meio ambiente</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="preco-container">
+                <h1 class="preco" [innerText]="preco"></h1>
+                <img src="../../assets/Pagaai.png" alt="pagaai">
+            </div>
+            
+        </div>
+    </div>
+    <div class="hr">
+
+    </div>
+    <div class="container-purchase">
+        <div class="discription">
+            <h2>Descrição</h2>
+            <label for="">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </label>
+        </div>
+        <div class="container-buy">
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <img src="../../assets/Pix.png" alt="pix">
+                <label><b>PAGUE PELO PIX</b> Ganhe 5% OFF em pagamento via PIX</label>
+            </div>
+            <button>BUY</button>
+        </div>
+    </div>
+</form>
+<app-footer></app-footer>
+

@@ -1,0 +1,79 @@
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container-input{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 5px;
+    border-radius: 10px;
+    align-items: center;
+
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    img{
+        width: 100px;
+    }
+
+    input{
+        background-image: linear-gradient(to right, #1A191B, #4B3BA9);
+        border: none;
+        color: white;
+        padding: 5px;
+        outline: none;
+        margin-bottom: 10px;
+    }
+
+    label{
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    input::placeholder{
+        color: rgb(83, 83, 83);
+    }
+}
+
+.container-login{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-image: url("../../assets/background.png");
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+    border: rgb(0, 0, 0) 20px solid ;
+
+    button{
+        padding: 10px;
+        border: none;
+        width: 150px;
+        color: white;
+        background-image: linear-gradient(to right, #1A191B, #4B3BA9);
+        border-radius: 10px;
+    }
+}
+
+.inputfile{
+    display: none;
+}
+
+.custom-file-upload {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: normal !important;
+    background-image: linear-gradient(to right, #1A191B, #4B3BA9);
+}

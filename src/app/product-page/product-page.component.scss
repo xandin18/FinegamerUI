@@ -1,0 +1,118 @@
+.form-produto{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+.background-produto{
+    background-image: url("../../assets/background.png");
+    background-size: cover;
+}
+
+.container-produto{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    color: white;
+
+    h2{
+        margin: auto;
+        padding: 5px; 
+        background-image: linear-gradient(to right, #1A191B, #4B3BA9);
+        margin-bottom: 30px;
+    }
+
+    .container-image{
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(to bottom, #4B3BA9, #1A191B);
+        height: 50%;
+        width: 70%;
+        img{
+            height: 80%;
+            width: 50%;
+        }
+    }
+}
+
+.hr{
+    background-image: linear-gradient(to bottom, #4B3BA9, #909091);
+    width: 2%;
+    height: 100%;
+}
+
+.container-purchase{
+    width: 60%;
+    color: white;
+
+    .discription{
+        display: flex;
+        background-color: #1A191B;
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+        gap: 10px;
+        font-weight: bold;
+        height: 80%;
+    }
+    .container-buy{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to bottom, #4B3BA9, #131313);
+        padding: 10px;
+        height: 20%;
+        button{
+            width: 70%;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #000;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            border: 5px solid gray;
+            background-image: linear-gradient(to right, #0e0e0e, #4B3BA9);
+        }
+    }
+}
+
+.preco{
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    border-bottom: 2px solid white;
+    padding: 0px 20px;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.useless{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 20px;
+}
+
+.preco-container{
+    display: flex;
+    gap: 10px;
+    align-items: end;
+}
+
+.container-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    img{
+        width: 70px;
+    }
+}
