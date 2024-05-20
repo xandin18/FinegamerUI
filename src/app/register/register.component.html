@@ -1,20 +1,23 @@
 <div class="container">
     <div class="container-login">
-        <img src="../../assets/logo.png" alt="">
+      <img src="../../assets/logo.png" alt="logo">
+      <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="container-inputs">
-            <div class="container-input">
-                <img src="../../assets/user.png" alt="user">
-                <input type="text" placeholder="Username">
-            </div>
-            <div class="container-input">
-                <img src="../../assets/padlock.png" alt="padlock">
-                <input type="password" placeholder="Password">
-            </div>
-            <div class="container-input">
-                <img class="correct" src="../../assets/correct.png" alt="correct">
-                <input type="password" placeholder="Confirmar senha">
-            </div>
+          <div class="container-input">
+            <img src="../../assets/user.png" alt="user">
+            <input type="email" formControlName="email" placeholder="Username">
+          </div>
+          <div class="container-input">
+            <img src="../../assets/padlock.png" alt="padlock">
+            <input type="password" formControlName="senha" placeholder="Password">
+          </div>
+          <div class="container-input">
+            <img class="correct" src="../../assets/correct.png" alt="correct">
+            <input type="password" formControlName="confirmPassword" placeholder="Confirmar senha">
+          </div>
         </div>
-        <button>Registrar</button>
+        <button type="submit" [disabled]="!registerForm.valid">Registrar</button>
+      </form>
     </div>
-</div>
+  </div>
+  

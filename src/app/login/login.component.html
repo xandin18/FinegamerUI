@@ -1,16 +1,19 @@
 <div class="container">
     <div class="container-login">
         <img src="../../assets/logo.png" alt="">
-        <div class="container-inputs">
-            <div class="container-input">
-                <img src="../../assets/user.png" alt="user">
-                <input type="text" placeholder="Username">
+        <form class="container-inputs" [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="container-inputs">
+                <div class="container-input">
+                    <img src="../../assets/user.png" alt="user">
+                    <input type="text" formControlName="email" placeholder="Username">
+                </div>
+                <div class="container-input">
+                    <img src="../../assets/padlock.png" alt="padlock">
+                    <input type="password" formControlName="senha" placeholder="Password">
+                </div>
             </div>
-            <div class="container-input">
-                <img src="../../assets/padlock.png" alt="padlock">
-                <input type="password" placeholder="Password">
-            </div>
-        </div>
-        <button>Login</button>
+            <button type="submit">Login</button>
+            <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+        </form>
     </div>
 </div>

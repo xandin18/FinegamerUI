@@ -10,13 +10,13 @@
                         <div class="cartaz">
                             <b>{{ produto.nome }}</b>
                             <img [src]="produto.foto" alt="Imagem">
-                            <h5>{{ produto.preco | currency:'BRL' }}</h5>
+                            <h5>{{ produto.valor | currency:'BRL' }}</h5>
                         </div>
                     </div>
                 </div>
                 <div class="button-area">
-                    <button type="button" class="prev" appPrev>Prev</button>
-                    <button type="button" class="next" appNext>Next</button>
+                    <button type="button" class="prev" appPrev><img src="../../assets/arrow-left.svg" alt=""></button>
+                    <button type="button" class="next" appNext><img src="../../assets/arrow-rigth.svg" alt=""></button>
                 </div>
             </div>
         </div>

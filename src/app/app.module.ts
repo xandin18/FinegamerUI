@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -35,7 +36,9 @@ import { ProductPageComponent } from './product-page/product-page.component';
     AppRoutingModule,
     NgbPaginationModule,
     NgbAlertModule,
-    NgbCarousel
+    NgbCarousel,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
