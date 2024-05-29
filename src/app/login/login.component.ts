@@ -24,19 +24,27 @@ export class LoginComponent implements OnInit {
   login(): void {
     if (this.loginForm.valid) {
       const { email, senha } = this.loginForm.value;
-
-      this.http.post<any>('https://localhost:7112/aplicattion/v1/login', { email, senha })
+  
+      this.http.get<any>(`https://localhost:7112/aplicattion/v1/login/${email}/password/${senha}`)
         .subscribe(
           response => {
-            this.router.navigate(['/']); // Redireciona para a página inicial em caso de sucesso
+            if(response == 1){
+              this.router.navigate(['/']);
+            }
+            else if(response == 2){
+              this.router.navigate(['/admin']);
+            }
+            else if(response == 3){
+              alert('Erro ao fazer login. Verifique suas credenciais e tente novamente.');
+            }
           },
           error => {
-            this.errorMessage = 'Erro ao fazer login. Verifique suas credenciais e tente novamente.';
+            alert('Erro ao fazer login. Verifique suas credenciais e tente novamente.');
             console.error('Erro no login:', error);
           }
         );
     } else {
-      this.errorMessage = 'Por favor, preencha todos os campos.';
+      alert('Por favor, preencha todos os campos.');
     }
   }
 }

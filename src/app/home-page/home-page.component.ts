@@ -8,11 +8,10 @@ import { Observable } from 'rxjs';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent{
+export class HomePageComponent implements OnInit {
   title = 'finegamer-app';
   produtos: Produto[] = [];
   form!: FormGroup;
-
   produtoAtual = 0;
 
   constructor(private http: HttpClient) { }
@@ -24,7 +23,10 @@ export class HomePageComponent{
 
   ngOnInit(): void {
     this.getProdutos().subscribe(produtos => {
-      this.produtos = produtos;
+      this.produtos = produtos.map(produto => ({
+        ...produto,
+        foto: produto.imagem ? `data:image/png;base64,${produto.imagem}` : ""
+      }));
     });
   }
 
@@ -37,14 +39,9 @@ export class HomePageComponent{
   }
 }
 
-export class Produto {
+export interface Produto {
   nome: string;
-  foto: string;
+  imagem: string;
   valor: number;
-
-  constructor(nome: string, foto: string, preco: number) {
-    this.nome = nome;
-    this.foto = foto;
-    this.valor = preco;
-  }
+  foto?: string; // Adicionando opcionalmente para o mapeamento
 }

@@ -28,8 +28,9 @@ export class RegisterComponent {
   }
 
   onSubmit(): void {
+    const formValue = this.registerForm.value;
     if (this.registerForm.valid) {
-      const formValue = this.registerForm.value;
+      
       const payload = {
         email: formValue.email,
         senha: formValue.senha
@@ -40,13 +41,14 @@ export class RegisterComponent {
       this.http.post('https://localhost:7112/aplicattion/v1/cliente', payload)
         .subscribe(
           response => {
-            console.log('Registration successful', response);
+            alert('Registrado com sucesso');
           },
           error => {
-            console.error('Registration error', error);
+            alert('Algo de errado está acontecendo tente novamente');
           }
         );
-    }
-    this.router.navigate(['']);
+    }else{
+      alert('Algo de errado está acontecendo tente novamente');
+    }    
   }
 }

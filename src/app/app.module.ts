@@ -16,6 +16,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { NextDirective } from './next.directive';
 import { PrevDirective } from './prev.directive';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
     NextDirective,
     PrevDirective,
     ProductPageComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,49 @@
+.container-admin{
+    height: 100vh;
+}
+
+.container-button-admin {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinha os itens ao topo do contêiner */
+    height: 90%;
+
+    div{
+        display: flex;
+        align-items: start;
+
+        a{
+            text-decoration: none;
+            padding: 10px;
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        a:hover{
+            background-color: rgb(184, 108, 255);
+        }
+    }
+}
+
+.container-voltar {
+    display: flex;
+    align-items: start;
+    
+    a {
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        margin: 10px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    a:hover {
+        background-color: blueviolet;
+        border-radius: 10px;
+        padding: 10px;
+    }
+}
