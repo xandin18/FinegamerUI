@@ -17,6 +17,7 @@ import { NextDirective } from './next.directive';
 import { PrevDirective } from './prev.directive';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { AdminComponent } from './admin/admin.component';
+import { AllProductsComponent } from './all-products/all-products.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { AdminComponent } from './admin/admin.component';
     PrevDirective,
     ProductPageComponent,
     AdminComponent,
+    AllProductsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="container-all">
+    <div class="scrollable-content">
+        <div class="container-product">
+            <hr class="divider">
+            <div class="item" *ngFor="let produto of produtos; let i = index" [class.active]="i === produtoAtual">
+                <a [href]="'produto/' + produto.nome">
+                    <div style="text-decoration: none; color: white;" class="cartaz">
+                        <b>{{ produto.nome }}</b>
+                        <img [src]="produto.foto" alt="Imagem">
+                        <h5>{{ produto.valor | currency:'BRL' }}</h5>
+                    </div>
+                </a>
+            </div>
+            <hr class="divider">
+        </div>
+    </div>
+</div>

@@ -3,7 +3,7 @@
     <div class="background-produto container-produto">
         <h2 [innerText]="nameproduct"></h2>
         <div class="container-image">
-            <img src="https://www.logitechstore.com.br/media/catalog/product/cache/1/image/634x545/9df78eab33525d08d6e5fb8d27136e95/g/2/g203-01.png" alt="image-product">
+            <img [src]="foto" [alt]="nameproduct">
         </div>
         <div class="useless">
             <div>
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="preco-container">
-                <h1 class="preco" [innerText]="preco"></h1>
+                <h1 style="font-size: 28px;" class="preco" [innerText]="preco | currency:'BRL'"></h1>
                 <img src="../../assets/Pagaai.png" alt="pagaai">
             </div>
             
@@ -37,8 +37,7 @@
     <div class="container-purchase">
         <div class="discription">
             <h2>Descrição</h2>
-            <label for="">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            <label [innerText]="descricao">
             </label>
         </div>
         <div class="container-buy">
